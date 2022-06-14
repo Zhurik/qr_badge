@@ -1,2 +1,4 @@
 # Ignoring generated stl files
 *.stl
+
+*.svg

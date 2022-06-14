@@ -95,7 +95,7 @@ union() {
         ])
         offset(0.01)  // To fix compile error
         import(
-            "/path/to/file/qr.svg",
+            "./qr.svg",
             center=true
         );
     }

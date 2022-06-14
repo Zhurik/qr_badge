@@ -8,6 +8,8 @@ PLACEHOLDER FOR IMAGE
 
 1. Prepare svg file of your desired QR code
 
+2. Put it in the same folder as ```badge.scad``` and call it ```qr.svg```
+
 2. Change all necessary parameters in ```badge.scad``` file
 
 3. Build docker image
