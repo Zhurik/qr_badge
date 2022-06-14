@@ -13,7 +13,7 @@ plate_width = qr_size + 2 * qr_offset;
 plate_depth = qr_size + 3 * qr_offset + text_height;
 plate_height = 2.5;
 
-label = "My WIFI;
+label = "My WIFI";
 
 ring_radius = 12;
 ring_thickness = 3;
