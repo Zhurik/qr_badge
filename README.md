@@ -10,7 +10,7 @@ TODO
 
 ## TODO
 
-- [ ] Build STL from Dockerfile
+- [ ] Add Dockerfile for image building
 
 - [ ] Pass parameters to Docker image
 
