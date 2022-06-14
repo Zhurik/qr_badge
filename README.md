@@ -24,8 +24,6 @@ docker run --mount type=bind,source="$(pwd)"/,target=/output qr_badger
 
 ## TODO
 
-- [x] Add Dockerfile for image building
-
 - [ ] Pass parameters to Docker image
 
 - [ ] Refactor SCAD files
@@ -39,3 +37,5 @@ docker run --mount type=bind,source="$(pwd)"/,target=/output qr_badger
 - [ ] Generate QR svg from parameters
 
 - [ ] Add ability to preview badge
+
+- [x] ~~Add Dockerfile for image building~~
