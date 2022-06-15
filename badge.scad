@@ -1,22 +1,31 @@
 use <roundedcube.scad>
 
 qr_size = 100;
+echo("QR size=", qr_size);
 qr_height = 2.5;
+echo("QR height=", qr_height);
 
 qr_offset = 5;
+echo("Qr offset=", qr_offset);
 
 border_radius = 5;
+echo("Border radius=", border_radius);
 
 text_height = 30;
+echo("Text height=", text_height);
 
 plate_width = qr_size + 2 * qr_offset;
 plate_depth = qr_size + 3 * qr_offset + text_height;
 plate_height = 2.5;
+echo("Plate height=", plate_height);
 
 label = "My WIFI";
+echo("Label is ", label);
 
 ring_radius = 12;
+echo("Ring radius=", ring_radius);
 ring_thickness = 3;
+echo("Ring thickness=", ring_thickness);
 
 union() {
     // Ring
