@@ -19,7 +19,7 @@ plate_depth = qr_size + 3 * qr_offset + text_height;
 plate_height = 2.5;
 echo("Plate height=", plate_height);
 
-label = "My WIFI";
+label = "Surprise";
 echo("Label is ", label);
 
 ring_radius = 12;

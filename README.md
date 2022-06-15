@@ -1,8 +1,10 @@
 # QR badge
 
-Simple scad to generate model of badge with qr code
+Simple scad to generate STL model of badge with qr code.
 
-PLACEHOLDER FOR IMAGE
+I designed it to make simple badge to help people connect to WIFI, but you can use it however you want!
+
+![example image](./img/surprise.png)
 
 ## How to create STL with docker
 
@@ -30,8 +32,6 @@ docker run --mount type=bind,source="$(pwd)"/,target=/output qr_badger
 
 - [ ] Refactor SCAD files
 
-- [ ] Add examples
-
 - [ ] Add optional ring
 
 - [ ] Add optional border
@@ -39,5 +39,7 @@ docker run --mount type=bind,source="$(pwd)"/,target=/output qr_badger
 - [ ] Generate QR svg from parameters
 
 - [ ] Add ability to preview badge
+
+- [x] ~~Add examples~~
 
 - [x] ~~Add Dockerfile for image building~~
