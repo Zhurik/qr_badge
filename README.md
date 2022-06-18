@@ -30,15 +30,15 @@ docker run --mount type=bind,source="$(pwd)"/,target=/output qr_badger
 
 - [ ] Pass parameters to Docker image
 
-- [ ] Refactor SCAD files
-
-- [ ] Add optional ring
-
 - [ ] Add optional border
 
 - [ ] Generate QR svg from parameters
 
 - [ ] Add ability to preview badge
+
+- [x] ~~Add optional ring~~
+
+- [x] ~~Refactor SCAD files~~
 
 - [x] ~~Add examples~~
 
