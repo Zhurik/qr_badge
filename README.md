@@ -62,7 +62,7 @@ Full list of parameters:
 
 ## TODO
 
-- [ ] Add optional border
+- [ ] Add optional hole at the top
 
 - [ ] Make text optional
 
@@ -71,6 +71,8 @@ Full list of parameters:
 - [ ] Generate QR svg from parameters
 
 - [ ] Add ability to preview badge
+
+- [x] ~~Add optional border~~
 
 - [x] ~~Pass parameters to Docker image~~
 

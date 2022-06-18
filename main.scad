@@ -13,6 +13,8 @@ echo(str("Qr offset = ", qr_offset));
 
 border_radius = 5;
 echo(str("Border radius = ", border_radius));
+border_thickness = 5;
+echo(str("Border thickness = ", border_radius));
 
 text_height = 30;
 echo(str("Text height = ", text_height));
@@ -31,6 +33,7 @@ ring_thickness = 3;
 echo(str("Ring thickness = ", ring_thickness));
 
 add_ring = true;
+add_border = true;
 
 if (add_ring) {
     echo("Building with ring");
@@ -42,8 +45,62 @@ if (add_ring) {
             qr_size,
             qr_offset,
             text_height,
-            plate_height
+            plate_height,
+            add_border,
+            border_thickness
         );
+
+       if (add_border) {
+            echo("Building with border");
+
+            badge_with_border(
+                qr_svg_path,
+                qr_size,
+                qr_offset,
+                qr_height,
+                plate_height,
+                text_height,
+                label,
+                text_size,
+                border_radius,
+                border_thickness
+            );
+        } else {
+            echo("Building without border");
+
+            badge(
+                qr_svg_path,
+                qr_size,
+                qr_offset,
+                qr_height,
+                plate_height,
+                text_height,
+                label,
+                text_size,
+                border_radius
+            );
+        }
+    }
+} else {
+    echo("Building without ring");
+
+    if (add_border) {
+        echo("Building with border");
+
+        badge_with_border(
+            qr_svg_path,
+            qr_size,
+            qr_offset,
+            qr_height,
+            plate_height,
+            text_height,
+            label,
+            text_size,
+            border_radius,
+            border_thickness
+        );
+    } else {
+        echo("Building without border");
 
         badge(
             qr_svg_path,
@@ -57,17 +114,4 @@ if (add_ring) {
             border_radius
         );
     }
-} else {
-    echo("Building without ring");
-    badge(
-        qr_svg_path,
-        qr_size,
-        qr_offset,
-        qr_height,
-        plate_height,
-        text_height,
-        label,
-        text_size,
-        border_radius
-    );
 }

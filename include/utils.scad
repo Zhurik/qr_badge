@@ -3,8 +3,12 @@ function calc_ring_position(
     qr_offset,
     text_height,
     ring_radius,
-    ring_thickness
-) = qr_size / 2 + text_height + qr_offset * 2 + ring_radius - ring_thickness;
+    ring_thickness,
+    add_border,
+    border_thickness
+) = add_border ?
+    qr_size / 2 + text_height + qr_offset * 2 + ring_radius - ring_thickness + border_thickness:
+    qr_size / 2 + text_height + qr_offset * 2 + ring_radius - ring_thickness;
 
 function calc_text_position(
     qr_size,
