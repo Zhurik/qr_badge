@@ -21,7 +21,7 @@ plate_height = 2.5;
 echo(str("Plate height = ", plate_height));
 
 label = "Surprise";
-echo(str("Label : ", label));
+echo(str("Label: ", label));
 text_size = 12;
 echo(str("Text size = ", text_size));
 
@@ -44,6 +44,7 @@ if (add_ring) {
             text_height,
             plate_height
         );
+
         badge(
             qr_svg_path,
             qr_size,

@@ -26,15 +26,53 @@ docker build -t qr_badger .
 docker run --mount type=bind,source="$(pwd)"/,target=/output qr_badger
 ```
 
+You can freely pass parameters to change the result of output model. For example:
+
+```bash
+docker run \
+    -e LABEL='New label' \
+    -e ADD_RING=false \
+    -e QR_SIZE=150 \
+    --mount type=bind,source="$(pwd)"/,target=/output qr_badger
+```
+
+Full list of parameters:
+
+- QR_SIZE
+
+- QR_HEIGHT
+
+- QR_OFFSET
+
+- BORDER_RADIUS
+
+- TEXT_HEIGHT
+
+- PLATE_HEIGHT
+
+- LABEL
+
+- TEXT_SIZE
+
+- RING_RADIUS
+
+- RING_THICKNESS
+
+- ADD_RING
+
 ## TODO
 
-- [ ] Pass parameters to Docker image
-
 - [ ] Add optional border
+
+- [ ] Make text optional
+
+- [ ] Add ability to add fonts
 
 - [ ] Generate QR svg from parameters
 
 - [ ] Add ability to preview badge
+
+- [x] ~~Pass parameters to Docker image~~
 
 - [x] ~~Add optional ring~~
 
