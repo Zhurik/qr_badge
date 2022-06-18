@@ -46,6 +46,8 @@ Full list of parameters:
 
 - BORDER_RADIUS
 
+- BORDER_RADIUS
+
 - TEXT_HEIGHT
 
 - PLATE_HEIGHT
@@ -59,6 +61,8 @@ Full list of parameters:
 - RING_THICKNESS
 
 - ADD_RING
+
+- ADD_BORDER
 
 ## TODO
 
