@@ -17,7 +17,7 @@ I designed it to make simple badge to help people connect to WIFI, but you can u
 3. Build docker image
 
 ```bash
-docker build -it qr_badger .
+docker build -t qr_badger .
 ```
 
 4. Run given image

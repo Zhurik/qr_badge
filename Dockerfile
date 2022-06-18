@@ -1,9 +1,9 @@
 FROM openscad/openscad
 
-ADD badge.scad .
-ADD qr.svg .
-ADD libraries/* .
-
 RUN mkdir /output
 
-CMD openscad -o /output/badge.stl badge.scad
+ADD include ./include
+ADD qr.svg .
+ADD main.scad .
+
+CMD openscad -o /output/badge.stl main.scad
