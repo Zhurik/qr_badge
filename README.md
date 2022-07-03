@@ -23,7 +23,7 @@ docker build -t qr_badger .
 4. Run given image
 
 ```bash
-docker run --mount type=bind,source="$(pwd)"/,target=/output qr_badger
+docker run --mount type=bind,source="$(pwd)"/,target=/data qr_badger
 ```
 
 You can freely pass parameters to change the result of output model. For example:
@@ -33,7 +33,7 @@ docker run \
     -e LABEL='New label' \
     -e ADD_RING=false \
     -e QR_SIZE=150 \
-    --mount type=bind,source="$(pwd)"/,target=/output qr_badger
+    --mount type=bind,source="$(pwd)"/,target=/data qr_badger
 ```
 
 Full list of parameters:
@@ -64,26 +64,20 @@ Full list of parameters:
 
 - ADD_BORDER
 
-## TODO
+## Features
 
-- [ ] Add optional hole at the top
+- [x] Optional border
+
+- [x] Optional ring at the top
+
+- [x] Docker image to generate STL from given parameters
+
+- [ ] Optional hole at the top
 
 - [ ] Make text optional
 
-- [ ] Add ability to add fonts
+- [ ] Ability to add external fonts
 
 - [ ] Generate QR svg from parameters
 
-- [ ] Add ability to preview badge
-
-- [x] ~~Add optional border~~
-
-- [x] ~~Pass parameters to Docker image~~
-
-- [x] ~~Add optional ring~~
-
-- [x] ~~Refactor SCAD files~~
-
-- [x] ~~Add examples~~
-
-- [x] ~~Add Dockerfile for image building~~
+- [ ] Preview badge from dockerfile

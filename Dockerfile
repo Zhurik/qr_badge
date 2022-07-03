@@ -1,6 +1,6 @@
 FROM openscad/openscad
 
-RUN mkdir /output
+RUN mkdir /data
 
 ENV QR_SIZE=100 \
     QR_HEIGHT=2.5 \
@@ -21,7 +21,7 @@ ADD main.scad .
 ADD qr.svg .
 
 CMD openscad main.scad \
-    -o /output/badge.stl \
+    -o /data/badge.stl \
     -D qr_size=${QR_SIZE} \
     -D qr_height=${QR_HEIGHT} \
     -D qr_offset=${QR_OFFSET} \
