@@ -1,7 +1,24 @@
 FROM openscad/openscad
 
+COPY ./scripts/* requirements.txt main.py main.scad ./
+COPY qr_code ./qr_code/
+COPY include ./include/
+
+RUN apt-get update && \
+    apt-get install python3 python3-pip -y && \
+    python3 -m pip install -r requirements.txt
+
 RUN mkdir /data
 
+RUN chmod +x ./run.sh
+
+# main.py specific arguments
+ENV WIFI_SSID="" \
+    WIFI_PASSWORD="" \
+    WIFI_AUTH_TYPE="WPA" \
+    WIFI_HIDDEN=false
+
+# main.scad specific arguments
 ENV QR_SIZE=100 \
     QR_HEIGHT=2.5 \
     QR_OFFSET=5 \
@@ -16,22 +33,4 @@ ENV QR_SIZE=100 \
     ADD_RING=true \
     ADD_BORDER=false
 
-ADD include ./include
-ADD main.scad .
-ADD qr.svg .
-
-CMD openscad main.scad \
-    -o /data/badge.stl \
-    -D qr_size=${QR_SIZE} \
-    -D qr_height=${QR_HEIGHT} \
-    -D qr_offset=${QR_OFFSET} \
-    -D border_radius=${BORDER_RADIUS} \
-    -D border_thickness=${BORDER_THICKNESS} \
-    -D text_height=${TEXT_HEIGHT} \
-    -D plate_height=${PLATE_HEIGHT} \
-    -D label=\""${LABEL}"\" \
-    -D text_size=${TEXT_SIZE} \
-    -D ring_radius=${RING_RADIUS} \
-    -D ring_thickness=${RING_THICKNESS} \
-    -D add_ring=${ADD_RING} \
-    -D add_border=${ADD_BORDER}
+CMD ./run.sh

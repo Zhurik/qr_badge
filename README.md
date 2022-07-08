@@ -10,9 +10,9 @@ I designed it to make simple badge to help people connect to WIFI, but you can u
 
 1. Prepare svg file of your desired QR code
 
-2. Put it in the same folder as ```badge.scad``` and call it ```qr.svg```
+2. Put it in the same folder as ```main.scad``` and call it ```qr.svg```
 
-2. Change all necessary parameters in ```badge.scad``` file
+2. Change all necessary parameters in ```main.scad``` file
 
 3. Build docker image
 
