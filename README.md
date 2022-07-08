@@ -33,6 +33,19 @@ docker run \
     -e LABEL='New label' \
     -e ADD_RING=false \
     -e QR_SIZE=150 \
+    -e SVG_PATH='./qr.svg'
+    --mount type=bind,source="$(pwd)"/,target=/data qr_badger
+```
+
+Or generate qr on the fly:
+
+```bash
+docker run \
+    -e LABEL='My WIFI' \
+    -e ADD_RING=false \
+    -e QR_SIZE=150 \
+    -e WIFI_SSID="My WIFI" \
+    -e WIFI_PASSWORD="admin1" \
     --mount type=bind,source="$(pwd)"/,target=/data qr_badger
 ```
 
@@ -64,6 +77,16 @@ Full list of parameters:
 
 - ADD_BORDER
 
+- WIFI_SSID
+
+- WIFI_PASSWORD
+
+- WIFI_AUTH_TYPE
+
+- WIFI_HIDDEN
+
+- SVG_PATH
+
 ## Features
 
 - [x] Optional border
@@ -72,12 +95,12 @@ Full list of parameters:
 
 - [x] Docker image to generate STL from given parameters
 
+- [x] Generate QR svg from parameters
+
 - [ ] Optional hole at the top
 
 - [ ] Make text optional
 
 - [ ] Ability to add external fonts
-
-- [ ] Generate QR svg from parameters
 
 - [ ] Preview badge from dockerfile

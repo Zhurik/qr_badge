@@ -1,16 +1,20 @@
 FROM openscad/openscad
 
-COPY ./scripts/* requirements.txt main.py main.scad ./
+RUN apt-get update && \
+    apt-get install python3 python3-pip -y && \
+    mkdir /data
+
+COPY requirements.txt ./
+
+RUN python3 -m pip install -r requirements.txt
+
+COPY ./scripts/* main.py main.scad ./
 COPY qr_code ./qr_code/
 COPY include ./include/
 
-RUN apt-get update && \
-    apt-get install python3 python3-pip -y && \
-    python3 -m pip install -r requirements.txt
-
-RUN mkdir /data
-
 RUN chmod +x ./run.sh
+
+ENV SVG_PATH=""
 
 # main.py specific arguments
 ENV WIFI_SSID="" \
