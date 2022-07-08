@@ -1,2 +1,13 @@
 # Ignoring generated stl files
 *.stl
+
+*.svg
+
+LICENSE
+
+examples/
+img/
+
+__pychache__/
+
+Dockerfile
