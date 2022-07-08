@@ -63,14 +63,17 @@ def parse_args(args: List[str]) -> argparse.Namespace:
 def main():
     args = parse_args(sys.argv[1:])
 
+    print("Starting generating SVG file")
     wifi_str = gen_wifi_str(
         args.wifi_ssid,
         AUTH_ENUM(args.wifi_auth_type),
         args.wifi_password,
         args.wifi_hidden,
     )
+    print("Generated wifi string")
 
     gen_wifi_svg(wifi_str, args.svg_path)
+    print(f"Saved to {args.svg_path}")
 
 
 if __name__ == "__main__":
