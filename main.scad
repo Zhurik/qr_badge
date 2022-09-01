@@ -16,9 +16,6 @@ echo(str("Border radius = ", border_radius));
 border_thickness = 5;
 echo(str("Border thickness = ", border_radius));
 
-text_height = 30;
-echo(str("Text height = ", text_height));
-
 plate_height = 2.5;
 echo(str("Plate height = ", plate_height));
 
@@ -26,6 +23,8 @@ label = "Surprise";
 echo(str("Label: ", label));
 text_size = 12;
 echo(str("Text size = ", text_size));
+text_height = len(label) < 1 ? 0 : text_size * 2;
+echo(str("Text height = ", text_height));
 
 ring_radius = 12;
 echo(str("Ring radius = ", ring_radius));
