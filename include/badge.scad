@@ -36,7 +36,9 @@ module badge(
         color("white")
         translate([
             0,
-            (text_height + qr_offset) / 2,
+            text_height > 0 ?
+            (text_height + qr_offset) / 2 :
+            0,
             plate_height / 2
         ]) {
             resize([
