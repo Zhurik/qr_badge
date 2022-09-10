@@ -19,20 +19,20 @@ echo(str("Border thickness = ", border_radius));
 plate_height = 2.5;
 echo(str("Plate height = ", plate_height));
 
-label = "Surprise";
+label = "";
 echo(str("Label: ", label));
-text_size = 12;
+text_size = 13;
 echo(str("Text size = ", text_size));
-text_height = len(label) < 1 ? 0 : text_size * 2;
+text_height = calc_text_height(label, text_size);
 echo(str("Text height = ", text_height));
 
-ring_radius = 12;
+ring_radius = 10;
 echo(str("Ring radius = ", ring_radius));
-ring_thickness = 3;
+ring_thickness = 5;
 echo(str("Ring thickness = ", ring_thickness));
 
-add_ring = true;
-add_border = true;
+add_ring = false;
+add_border = false;
 
 if (add_ring) {
     echo("Building with ring");

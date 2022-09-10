@@ -36,9 +36,7 @@ module badge(
         color("white")
         translate([
             0,
-            text_height > 0 ?
-            (text_height + qr_offset) / 2 :
-            0,
+            calc_y_pos(text_height, qr_offset),
             plate_height / 2
         ]) {
             resize([
@@ -116,7 +114,7 @@ module badge_with_border(
         color("white")
         translate([
             0,
-            (text_height + qr_offset) / 2,
+            calc_y_pos(text_height, qr_offset),
             plate_height / 2
         ]) {
             resize([
@@ -141,7 +139,7 @@ module badge_with_border(
         difference() {
             translate([
                 0,
-                (text_height + qr_offset) / 2,
+                calc_y_pos(text_height, qr_offset),
                 plate_height / 2 * 3 - 0.001
             ]) {
                 resize([
@@ -163,7 +161,7 @@ module badge_with_border(
 
             translate([
                 0,
-                (text_height + qr_offset) / 2,
+                calc_y_pos(text_height, qr_offset),
                 plate_height / 2 * 3
             ]) {
                 resize([
