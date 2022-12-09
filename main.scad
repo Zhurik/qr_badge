@@ -1,6 +1,6 @@
 include <include/badge.scad>
 
-qr_svg_path = "qr.svg";
+qr_svg_path = "qrer.svg";
 echo(str("Using qr file ", qr_svg_path));
 
 qr_size = 100;
@@ -16,7 +16,17 @@ echo(str("Border radius = ", border_radius));
 border_thickness = 5;
 echo(str("Border thickness = ", border_radius));
 
+add_magnets = true;
+magnets_height = 3;
+magnets_diameter = 5;
+
 plate_height = 2.5;
+
+if (add_magnets) {
+    echo("Plate height initial parameter ignored");
+    plate_height = 2 * megnets_height;
+}
+
 echo(str("Plate height = ", plate_height));
 
 label = "Surprise";
