@@ -65,7 +65,7 @@ Full list of parameters:
 
 - PLATE_HEIGHT
 
-- LABEL
+- LABEL (to remove text just leave LABEL blank)
 
 - TEXT_SIZE
 
@@ -97,9 +97,9 @@ Full list of parameters:
 
 - [x] Generate QR svg from parameters
 
-- [ ] Optional hole at the top
+- [x] Make text optional
 
-- [ ] Make text optional
+- [ ] Optional hole at the top
 
 - [ ] Ability to add external fonts
 
