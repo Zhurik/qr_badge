@@ -1,5 +1,8 @@
 include <include/badge.scad>
 
+// This line is used for adding custom fonts in docker image
+// use </openscad/custom.ttf>
+
 qr_svg_path = "qr.svg";
 echo(str("Using qr file ", qr_svg_path));
 
@@ -14,7 +17,7 @@ echo(str("Qr offset = ", qr_offset));
 border_radius = 5;
 echo(str("Border radius = ", border_radius));
 border_thickness = 5;
-echo(str("Border thickness = ", border_radius));
+echo(str("Border thickness = ", border_thickness));
 
 plate_height = 2.5;
 echo(str("Plate height = ", plate_height));

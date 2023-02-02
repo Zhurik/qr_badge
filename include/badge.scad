@@ -29,6 +29,8 @@ module badge(
                 text_size,
                 valign="center",
                 halign="center"
+                // Placeholder for defining custom font family
+                // ,font="PLACEHOLDER"
             );
         }
 
@@ -107,6 +109,8 @@ module badge_with_border(
                 text_size,
                 valign="center",
                 halign="center"
+                // Placeholder for defining custom font family
+                // ,font="PLACEHOLDER"
             );
         }
 

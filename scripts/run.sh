@@ -1,5 +1,16 @@
 #!/bin/sh
 
+if [ -z ${FONT_PATH} ]
+then
+    echo "Using standart font"
+else
+    cp /data/${FONT_PATH} /openscad/custom.ttf
+    export FONT_NAME=$(fc-scan /openscad/custom.ttf | grep -oP '(?<=fullname: \").*?(?=\")')
+    echo "Using font $FONT_NAME"
+    sed -i 's/\/\/ use <\/openscad\/custom\.ttf>/use <\/openscad\/custom\.ttf>/' main.scad
+    sed -i 's/\/\/ ,font=\"PLACEHOLDER\"/,font="'"$FONT_NAME"'"/' include/badge.scad
+fi;
+
 if [ -z ${SVG_PATH} ]
 then
     echo "Generating SVG from parameters"
@@ -12,7 +23,6 @@ else
         -D qr_offset=${QR_OFFSET} \
         -D border_radius=${BORDER_RADIUS} \
         -D border_thickness=${BORDER_THICKNESS} \
-        -D text_height=${TEXT_HEIGHT} \
         -D plate_height=${PLATE_HEIGHT} \
         -D label=\""${LABEL}"\" \
         -D text_size=${TEXT_SIZE} \
@@ -20,10 +30,10 @@ else
         -D ring_thickness=${RING_THICKNESS} \
         -D add_ring=${ADD_RING} \
         -D add_border=${ADD_BORDER}
-    exit 1;
+    exit 0
 fi;
 
-if [ -z "$WIFI_SSID" ]
+if [ -z ${WIFI_SSID} ]
 then
     echo "Missing WIFI_SSID env"
     exit 1
@@ -77,7 +87,6 @@ openscad main.scad \
     -D qr_offset=${QR_OFFSET} \
     -D border_radius=${BORDER_RADIUS} \
     -D border_thickness=${BORDER_THICKNESS} \
-    -D text_height=${TEXT_HEIGHT} \
     -D plate_height=${PLATE_HEIGHT} \
     -D label=\""${LABEL}"\" \
     -D text_size=${TEXT_SIZE} \

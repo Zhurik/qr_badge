@@ -95,9 +95,13 @@ Full list of parameters:
 
 - [x] Docker image to generate STL from given parameters
 
+- [x] Docker-compose
+
 - [x] Generate QR svg from parameters
 
 - [x] Make text optional
+
+- [ ] Optional holes for magnets
 
 - [ ] Optional hole at the top
 
