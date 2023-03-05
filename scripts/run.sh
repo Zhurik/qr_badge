@@ -28,8 +28,8 @@ else
         -D text_size=${TEXT_SIZE} \
         -D ring_radius=${RING_RADIUS} \
         -D ring_thickness=${RING_THICKNESS} \
-        -D add_ring=${ADD_RING} \
-        -D add_border=${ADD_BORDER}
+        -D magnets_height=${MAGNETS_HEIGHT} \
+        -D magnets_diameter=${MAGNETS_DIAMETER}
     exit 0
 fi;
 
@@ -92,5 +92,5 @@ openscad main.scad \
     -D text_size=${TEXT_SIZE} \
     -D ring_radius=${RING_RADIUS} \
     -D ring_thickness=${RING_THICKNESS} \
-    -D add_ring=${ADD_RING} \
-    -D add_border=${ADD_BORDER}
+    -D magnets_height=${MAGNETS_HEIGHT} \
+    -D magnets_diameter=${MAGNETS_DIAMETER}

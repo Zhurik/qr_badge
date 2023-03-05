@@ -6,7 +6,15 @@ I designed it to make simple badge to help people connect to WIFI, but you can u
 
 ![example image](./img/surprise.png)
 
-## How to create STL with docker
+## How to create STL with docker-compose
+
+1. Prepare svg file of your desired qr code (or provide parameters for its generation in ```docker-compose.yaml``` file)
+
+2. Change all the necessary parameters in the ```environment``` section of the ```docker-compose.yaml``` file
+
+3. Run ```docker-compose up```
+
+## How to create STL with docker (old)
 
 1. Prepare svg file of your desired QR code
 
@@ -49,47 +57,9 @@ docker run \
     --mount type=bind,source="$(pwd)"/,target=/data qr_badger
 ```
 
-Full list of parameters:
-
-- QR_SIZE
-
-- QR_HEIGHT
-
-- QR_OFFSET
-
-- BORDER_RADIUS
-
-- BORDER_RADIUS
-
-- TEXT_HEIGHT
-
-- PLATE_HEIGHT
-
-- LABEL (to remove text just leave LABEL blank)
-
-- TEXT_SIZE
-
-- RING_RADIUS
-
-- RING_THICKNESS
-
-- ADD_RING
-
-- ADD_BORDER
-
-- WIFI_SSID
-
-- WIFI_PASSWORD
-
-- WIFI_AUTH_TYPE
-
-- WIFI_HIDDEN
-
-- SVG_PATH
+Full list of parameters presented in ```./docker-compose.yaml``` file.
 
 ## Features
-
-- [x] Optional border
 
 - [x] Optional ring at the top
 
@@ -101,10 +71,12 @@ Full list of parameters:
 
 - [x] Make text optional
 
-- [ ] Optional holes for magnets
-
-- [ ] Optional hole at the top
+- [x] Optional holes for magnets
 
 - [ ] Ability to add external fonts
+
+- [ ] Optional border (bug needs to be fixed)
+
+- [ ] Optional hole at the top
 
 - [ ] Preview badge from dockerfile

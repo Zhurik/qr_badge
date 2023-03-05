@@ -1,6 +1,8 @@
 use <roundedcube.scad>
 use <utils.scad>
 
+include <magnets/magnets.scad>
+
 module badge(
     qr_svg_path,
     qr_size,
