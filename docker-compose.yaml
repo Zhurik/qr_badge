@@ -4,15 +4,15 @@ services:
     build: .
     environment:
       # Comment this line if you want to generate qr-code on the fly
-      - SVG_PATH=./qr.svg
+      # - SVG_PATH=./qr.svg
 
       # Uncomment this line if you want to use custom font for label
       # TTF ONLY!
       # - FONT_PATH=./Custom.ttf
 
       # Uncomment necessary lines if you want to generate qr on the fly
-      # - WIFI_SSID=My WIFI
-      # - WIFI_PASSWORD=admin1
+      - WIFI_SSID=My wifi
+      - WIFI_PASSWORD=admin1
       # - WIFI_AUTH_TYPE=WPA
       # - WIFI_HIDDEN=false
 
@@ -21,14 +21,14 @@ services:
       - QR_HEIGHT=0.6
       - QR_OFFSET=5
       - BORDER_RADIUS=5
-      - BORDER_THICKNESS=3
+      - BORDER_THICKNESS=0
       - PLATE_HEIGHT=3
       - LABEL=Test 123
       - TEXT_SIZE=12
       - RING_RADIUS=12
       - RING_THICKNESS=3
-      - ADD_RING=true
-      - ADD_BORDER=false
+      - MAGNETS_HEIGHT=2
+      - MAGNETS_DIAMETER=6
 
     volumes:
       - type: bind
