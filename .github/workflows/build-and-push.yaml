@@ -32,4 +32,4 @@ jobs:
           context: .
           push: true
           tags: qrbadge:latest,qrbadge:${{ github.ref_name }}
-          platforms: linux/amd64,linux/arm64
+          platforms: zhurik.cr.cloud.ru/linux/amd64,zhurik.cr.cloud.ru/linux/arm64
