@@ -45,7 +45,7 @@ add_ring = decide_ring(ring_radius, ring_thickness);
 add_border = decide_border(border_thickness);
 add_magnets = decide_magnets(magnets_height, magnets_diameter);
 
-echo ("Building wothout border, until bug is not fixed");
+echo ("Building without border, until bug is not fixed");
 
 if (add_ring) {
     echo("Building with ring");

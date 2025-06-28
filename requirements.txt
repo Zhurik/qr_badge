@@ -1,1 +1,1 @@
-qrcode==8.2
+qrcode==7.4.2
