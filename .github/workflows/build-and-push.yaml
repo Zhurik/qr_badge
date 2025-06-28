@@ -31,5 +31,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: qrbadge:latest,qrbadge:${{ github.ref_name }}
-          platforms: zhurik.cr.cloud.ru/linux/amd64,zhurik.cr.cloud.ru/linux/arm64
+          tags: zhurik.cr.cloud.ru/qrbadge:latest,zhurik.cr.cloud.ru/qrbadge:${{ github.ref_name }}
+          platforms: linux/amd64,linux/arm64
