@@ -1,4 +1,4 @@
-FROM openscad/openscad
+FROM openscad/openscad@sha256:147e48525bec392bcf628d7a6d5ea4ccac71b16251952328f86e1061cbf47c37
 
 RUN apt-get update && \
     apt-get install python3 python3-pip -y && \
