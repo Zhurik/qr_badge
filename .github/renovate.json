@@ -1,0 +1,11 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"extends": ["config:best-practices", "docker:enableMajor", "default:automergeDigest"],
+	"packageRules": [
+		{
+			"matchDepTypes": ["devDependencies"],
+			"automerge": true
+		}
+	],
+	"assigneesFromCodeOwners": true
+}
