@@ -15,7 +15,7 @@ def gen_wifi_str(
     ssid: str,
     auth_type: AUTH_ENUM,
     password: Optional[str] = None,
-    hidden: bool = False
+    hidden: bool = False,
 ) -> str:
     hidden = "true" if hidden else "false"
 
