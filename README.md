@@ -1,5 +1,7 @@
 # QR badge
 
+[pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+
 Simple scad to generate STL model of badge with qr code.
 
 I designed it to make simple badge to help people connect to WIFI, but you can use it however you want!
