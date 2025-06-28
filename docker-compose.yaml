@@ -13,7 +13,7 @@ services:
       # Uncomment necessary lines if you want to generate qr on the fly
       - WIFI_SSID=My wifi
       - WIFI_PASSWORD=admin1
-      # - WIFI_AUTH_TYPE=WPA
+      - WIFI_AUTH_TYPE=WPA
       # - WIFI_HIDDEN=false
 
       # main.scad specific arguments

@@ -1,1 +1,1 @@
-from .wifi import *
+from .wifi import *  # noqa F403
