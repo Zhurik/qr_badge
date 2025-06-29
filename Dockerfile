@@ -21,5 +21,4 @@ COPY include ./include/
 
 RUN chmod +x ./run.sh
 
-CMD ./run.sh
-# CMD ["./run.sh"]
+CMD ["./run.sh"]
