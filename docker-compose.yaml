@@ -2,7 +2,7 @@ version: "3.9"
 services:
   openscad:
     # build: .
-    image: zhurik.cr.cloud.ru/qrbadge@sha256:fd5e1b54c2c938d521e4e5c908b15b0d7c770e20a8cf3aee27e75e5791e06e22
+    image: zhurik.cr.cloud.ru/qrbadge@sha256:b1caaeddc991b013db382b42b10dde91fafc8a288ae34e80840d20d53f53db54
     environment:
       # Comment this line if you want to generate qr-code on the fly
       # - SVG_PATH=./qr.svg
