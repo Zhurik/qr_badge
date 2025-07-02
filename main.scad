@@ -6,20 +6,33 @@ include <include/badge.scad>
 qr_svg_path = "qr.svg";
 echo(str("Using qr file ", qr_svg_path));
 
+/* [QR код] */
+// Сторона QR кода в мм
 qr_size = 100;
 echo(str("QR size = ", qr_size));
+
+// Высота QR кода в мм
 qr_height = 0.6;
 echo(str("QR height = ", qr_height));
 
+// Отступ QR кода от границы в мм
 qr_offset = 5;
 echo(str("Qr offset = ", qr_offset));
 
+/* [Бордюр] */
+// Радиус углов бордюра в мм
 border_radius = 5;
 echo(str("Border radius = ", border_radius));
+
+// Толщина бордюра в мм
 border_thickness = 0;
 echo(str("Border thickness = ", border_radius));
 
+/* [Магниты] */
+// Глубина выемки под магнит в мм
 magnets_height = 1.8;
+
+// Диаметр выемки под магнит в мм
 magnets_diameter = 6;
 
 plate_height = calc_plate_height(
@@ -29,15 +42,24 @@ plate_height = calc_plate_height(
 );
 echo(str("Plate height = ", plate_height));
 
+/* [Надпись] */
+// Надпись сверху QR кода
 label = "";
 echo(str("Label: ", label));
+
+// Размер шрифта
 text_size = 12;
 echo(str("Text size = ", text_size));
+
 text_height = calc_text_height(label, text_size);
 echo(str("Text height = ", text_height));
 
+/* [Кольцо] */
+// Радиус кольца сверху в мм
 ring_radius = 10;
 echo(str("Ring radius = ", ring_radius));
+
+// Толщина кольца сверху в мм
 ring_thickness = 3;
 echo(str("Ring thickness = ", ring_thickness));
 
