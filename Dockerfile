@@ -1,19 +1,25 @@
-FROM openscad/openscad@sha256:147e48525bec392bcf628d7a6d5ea4ccac71b16251952328f86e1061cbf47c37
+FROM openscad/openscad:trixie@sha256:3a040760d376ccbb3bff07e44a1be3c2570435f093f5fa4bf08e3991e7412b8c
 
 WORKDIR /openscad
 
+# Debian drops superseded package versions from its mirrors, so exact apt pins
+# break the build on every point release; the base image digest pins them instead.
+# hadolint ignore=DL3008
 RUN apt-get update && \
     apt-get install \
-        python3=3.7.3-1 \
-        python3-pip=18.1-5 \
+        python3 \
+        python3-venv \
         -y --no-install-recommends && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
+    python3 -m venv /opt/venv && \
     mkdir /data
+
+ENV PATH="/opt/venv/bin:$PATH"
 
 COPY requirements.txt ./
 
-RUN python3 -m pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 COPY ./scripts/* main.py main.scad ./
 COPY qr_code ./qr_code/
