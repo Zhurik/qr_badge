@@ -18,6 +18,7 @@ else
     cp /data/${SVG_PATH} /openscad/qr.svg
     openscad main.scad \
         -o /data/badge.stl \
+        -D qr_svg_path=\"/openscad/qr.svg\" \
         -D qr_size=${QR_SIZE} \
         -D qr_height=${QR_HEIGHT} \
         -D qr_offset=${QR_OFFSET} \
@@ -82,6 +83,7 @@ fi;
 
 openscad main.scad \
     -o /data/badge.stl \
+    -D qr_svg_path=\"/openscad/qr.svg\" \
     -D qr_size=${QR_SIZE} \
     -D qr_height=${QR_HEIGHT} \
     -D qr_offset=${QR_OFFSET} \
